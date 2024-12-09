@@ -29,3 +29,5 @@ jobs:
           start: npm run start-prod
           wait-on: http://localhost:5000
           command: npm run test:e2e
+        env:
+          ELECTRON_EXTRA_LAUNCH_ARGS: '--disable-gpu'
