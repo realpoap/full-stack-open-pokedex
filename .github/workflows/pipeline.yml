@@ -29,3 +29,10 @@ jobs:
           wait-on: http://localhost:5000
         env:
           ELECTRON_EXTRA_LAUNCH_ARGS: '--disable-gpu'
+      - name: Render Deployment
+        uses: sws2apps/render-deployment@v1.8.0
+        with:
+          serviceId: ${{ secrets.RENDER_SERVICE_ID }}
+          apiKey: ${{ secrets.RENDER_API_KEY }}
+          multipleDeployment: false #optional, default true
+            
