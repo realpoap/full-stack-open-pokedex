@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, BrowserRouter as Routes, useMatch } from 'react-router-dom'
+import { Route, Routes, useMatch } from 'react-router-dom'
 import ErrorMessage from './ErrorMessage'
 import LoadingSpinner from './LoadingSpinner'
 import PokemonList from './PokemonList'
