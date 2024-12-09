@@ -8,7 +8,8 @@ describe('Pokedex', function () {
 
 describe('Pokemon', function () {
   it('pokemon single page can be viewed', function () {
-    cy.visit('http://localhost:5000/pokemon/ivysaur')
+    cy.visit('http://localhost:5000')
+    cy.contains('ivysaur').click()
     cy.contains('ivysaur')
     cy.contains('chlorophyll')
   })
