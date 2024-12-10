@@ -11,8 +11,8 @@ app.get('/version', (req, res) => {
 })
 
 app.get('/health', (req, res) => {
-  throw Error('not in good health')
-  //eslint-disable-next-line no-unreachable
+  // eslint-disable-next-line no-constant-condition
+  if (true) throw ('error...  ')
   res.send('ok')
 })
 
