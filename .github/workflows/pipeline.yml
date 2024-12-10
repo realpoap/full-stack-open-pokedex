@@ -3,11 +3,13 @@ name: Deployment pipeline
 on:
   push:
     branches:
-      - main
+      - pending
 
   pull_request:
-    branches: [main]
-    types: [opened, synchronize]
+    branches:
+      - main
+    types:
+      - closed
 
 jobs:
   simple_deployment_pipeline:
@@ -39,6 +41,7 @@ jobs:
   tag_release:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-20.04
+    if: github.event.pull_request.merged == true
     permissions:
       contents: write
     steps:
