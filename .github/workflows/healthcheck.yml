@@ -1,7 +1,7 @@
 name: Verify HealthCheck
 
 on:
-	[push]
+  [push]
 
 jobs:
   check_health:
