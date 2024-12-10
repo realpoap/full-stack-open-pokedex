@@ -62,7 +62,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Success
         uses: rjstone/discord-webhook-notify@v1
-        if: ${{ failure() }}
+        if: ${{ success() }}
         with:
           severity: info
           details: Build Succeeded!
