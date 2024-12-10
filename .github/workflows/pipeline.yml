@@ -50,7 +50,6 @@ jobs:
         with:
           embed-color: 14701393
           username: Discord Notify Action
-          avatar-url: https://avatars.githubusercontent.com/u/9919?v=4
           embed-title: ❌  Deployment failed on ${{github.repository}}
           embed-description: ${{github.event.head_commit.message}}
           webhook-url: ${{ secrets.DISCORD_WEBHOOK }}
@@ -59,7 +58,6 @@ jobs:
         uses: tsickert/discord-webhook@v5.3.0
         with:
           username: Github Actions
-          avatar-url: https://avatars.githubusercontent.com/u/9919?v=4
           embed-color: 6144854
           embed-title: ✅  New version deployed of ${{github.repository}}
           embed-description: ${{github.event.head_commit.message}}
