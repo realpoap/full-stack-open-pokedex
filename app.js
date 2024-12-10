@@ -12,7 +12,8 @@ app.get('/version', (req, res) => {
 
 app.get('/health', (req, res) => {
   throw Error('not in good health')
-  //res.send('ok')
+  //eslint-disable-next-line no-unreachable
+  res.send('ok')
 })
 
 app.listen(PORT, () => {
